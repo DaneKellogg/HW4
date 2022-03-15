@@ -7,6 +7,6 @@ class UsersController < ApplicationController
     @user = User.new(params["user"])
     @user.password = BCrypt::Password.create(plain_text_password)
     @user.save
-    redirect_to "/posts"
+    redirect_to "/"
   end
 end
